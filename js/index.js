@@ -38,6 +38,8 @@ submitBtn.addEventListener("click", async (e) => {
 
     let key = "ema_live_qmYNKpRf4K0OjKt6JlV0uLIATDUmY00pPPs5iDvh";
     let email = document.getElementById("useremail").value;
+    //setting email value
+    Moengage.add_email(email);
     let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
     let res = await fetch(url)
     let result = await res.json()
