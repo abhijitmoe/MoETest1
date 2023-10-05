@@ -6,7 +6,7 @@ window.addEventListener("MOE_LIFECYCLE",function(e){
     "main_class":"moe-main-class",
     "allow_class":"moe-allow-class",
     "block_class":"moe-block-class" 
-    }), 5000);
+    }), 3000);
     }
 })
 
@@ -40,6 +40,8 @@ submitBtn.addEventListener("click", async (e) => {
     let email = document.getElementById("useremail").value;
     //setting email value
     Moengage.add_email(email);
+    //setting ID
+    Moengage.add_unique_user_id(email);
     let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
     let res = await fetch(url)
     let result = await res.json()
@@ -51,6 +53,8 @@ submitBtn.addEventListener("click", async (e) => {
     }
     resultCont.innerHTML = str;
 })
+
+setTimeout(Moengage.destroy_session(),8000);
 
 
 
