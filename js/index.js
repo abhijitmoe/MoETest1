@@ -1,7 +1,7 @@
 window.addEventListener("MOE_LIFECYCLE",function(e){
     if(e.detail.name === "SDK_INITIALIZED"){
     console.log("This is MoE script");
-    Moengage.call_web_push();
+    setTimeout(Moengage.call_web_push(), 5000);
     }
 })
 
