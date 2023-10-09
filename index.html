@@ -12,6 +12,10 @@
             app_id: "XLEHW4J6XLHTBWA2Y15APURG",
             debug_logs: 1,
             swPath: "MoETest1/serviceworker.js"
+            cards: {
+              enable: true,
+              placeholder: '#cardsid' // CSS selector of inbox icon 
+            } 
         });
     </script>
 </head>
@@ -21,6 +25,9 @@
         <button class="moe-allow-class">YES</button>
 <button class="moe-block-class">NO</button>
         </div>
+    <div>
+         <button id="cardsid" class="cardsmoe">Cards</button>
+    </div>
     <header>
         <nav>
             <div class="logo">
@@ -60,6 +67,12 @@
     </footer>
 
     <script src="js/index.js"></script>
+    <script>
+        cardsid.addEventListener("click", async (e) => {
+    e.preventDefault()
+   console.log("Card Button Clicked");
+        })
+    </script>
 </body>
 
 </html>
