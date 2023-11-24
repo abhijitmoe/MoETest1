@@ -54,7 +54,7 @@ submitBtn.addEventListener("click", async (e) => {
     resultCont.innerHTML = str;
 })
 
-setTimeout(Moengage.destroy_session(),8000);
+//setTimeout(Moengage.destroy_session(),8000);
 
 
 
